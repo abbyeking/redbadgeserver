@@ -11,7 +11,6 @@ router.post('/create', validateSession, function (req, res) {
         images: req.body.images,
         notes: req.body.notes,
         tier: req.body.tier,
-        resources: req.body.resources,
         description: req.body.description,
         publisher: req.body.publisher,
     })
@@ -29,7 +28,7 @@ router.post('/create', validateSession, function (req, res) {
 
 ///UPDATE 
 router.put('/update/:entryId', validateSession, function (req, res) {  
-    const updateRecipeEntry = {
+    const updatePodcastEntry = {
         entry: req.body.entry,
         name: req.body.name,
     };

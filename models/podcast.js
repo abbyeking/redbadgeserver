@@ -1,10 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Podcast = sequelize.define('podcast', {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: true
-        },
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     unique: true
+        // },
         notes: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: true,
         },
-        resources: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        // resources: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
         description: {
             type: DataTypes.STRING,
             allowNull: false
