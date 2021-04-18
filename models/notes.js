@@ -4,14 +4,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: true
     },
-    tier: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
-    date: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    }
+    // tier: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
+    // },
+    // date: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: true,
+    // }
 })
 return Notes;
 }

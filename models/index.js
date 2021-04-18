@@ -3,14 +3,14 @@ const Podcast = require('./podcast')
 const Notes = require('./notes')
 
 //db association sets up here
-User.hasMany(Podcast) //podcast is model
-Podcast.belongsTo(User) //sets up extra column in table
+user.hasMany(podcast) //podcast is model
+podcast.belongsTo(user) //sets up extra column in table
 
-User.hasMany(Notes)
-Notes.belongsTo(User)
+user.hasMany(notes)
+notes.belongsTo(user)
 
-Podcast.hasOne(Notes)
-Notes.belongsTo(Podcast)
+podcast.hasOne(notes)
+notes.belongsTo(podcast)
 
 module.exports = {
     User,
