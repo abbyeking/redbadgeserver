@@ -2,8 +2,8 @@ const router = require('express').Router()
 const { DELETE, UPDATE } = require('sequelize/types/lib/query-types')
 const { podcast, notes, user } = require('../models/index')
 
+// CREATE NOTES
 
-// Create Notes
 router.post('/', async (req, res) => {
   const { notes } = req.body.notes
   const { userId, podcastId } = req.body
