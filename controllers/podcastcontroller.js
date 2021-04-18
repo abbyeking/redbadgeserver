@@ -9,10 +9,8 @@ router.post('/create', validateSession, function (req, res) {
         owner: req.user.id,
         name: req.body.name,
         images: req.body.images,
-        notes: req.body.notes,
-        tier: req.body.tier,
         description: req.body.description,
-        publisher: req.body.publisher,
+        genre: req.body.genre
     })
         .then(
             function createSuccess(podcast) {
@@ -26,7 +24,7 @@ router.post('/create', validateSession, function (req, res) {
         .catch(err => res.status(500).json({ error: err }))
 });
 
-///UPDATE 
+///UPDATE GENRE
 router.put('/update/:entryId', validateSession, function (req, res) {  
     const updatePodcastEntry = {
         entry: req.body.entry,

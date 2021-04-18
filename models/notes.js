@@ -1,7 +1,5 @@
-const { DataTypes } = require('sequelize')
-const db = require('../db')
-
-module.exports = db.define('notes', {
+module.exports = (sequelize, DataTypes) => {
+    const Notes = sequelize.define('notes', {
     notes: {
         type: DataTypes.TEXT,
         allowNull: true
@@ -15,3 +13,5 @@ module.exports = db.define('notes', {
         allowNull: true,
     }
 })
+return Notes;
+}

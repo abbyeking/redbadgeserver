@@ -1,5 +1,5 @@
 module.exports = {
-    User: require('./users'),
+    User: require('./usercontroller'),
     Notes: require('./notescontroller'),
-    Podcast: require('./podcasts')
+    Podcast: require('./podcastcontroller')
 }

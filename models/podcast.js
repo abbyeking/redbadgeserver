@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, DataTypes) => {
     const Podcast = sequelize.define('podcast', {
         name: {
