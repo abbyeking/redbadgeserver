@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Notes = sequelize.define('notes', {
     notes: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: true
     },
     // tier: {
