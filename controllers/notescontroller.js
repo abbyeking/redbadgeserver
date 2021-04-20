@@ -16,9 +16,10 @@ const Notes = require('../db').import('../models/notes');
 //     }
 // })
 
-router.post('/', validateSession, function (req, res) {
+router.post('/:pid', validateSession, function (req, res) {
     Notes.create({
-        notes: req.body.notes
+        notes: req.body.notes,
+        pid: req.params.pid
     })
         .then(
             function createSuccess(notes) {
@@ -58,7 +59,7 @@ router.get('/podcast/:pid', validateSession, (req, res) => {
     let podcastid = req.user.pid
     Notes.findAll({
         where: {pid: podcastid},
-        include: Notes
+        include: 'Notes'
     })
         .then(notes => res.status(200).json(notes))
         .catch(err =>res.status(500).json({ error: err }))
